@@ -1,0 +1,32 @@
+class Mahasiswa implements Comparable<Mahasiswa> { 
+  String nrp; 
+  String nama; 
+
+  Mahasiswa(this.nrp, this.nama);
+ 
+  @override 
+  int compareTo(Mahasiswa other) { 
+  return this.nrp.compareTo(other.nrp);
+  } 
+ 
+  @override 
+  String toString() { 
+    // Implementasi representasi string dari objek Mahasiswa 
+  return 'Nama Mahasiswa:$nama nrp:$nrp';
+  } 
+} 
+
+void main(){
+  var m1=Mahasiswa('10983','Sinaga');
+ var m2=Mahasiswa('23109','Rena');
+  var m3=Mahasiswa('99872','Vegeta');
+
+  print(m1.compareTo(m2));
+  print(m3.compareTo(m2));
+  print(m3.compareTo(m1));
+
+  print(m1);
+  print(m2);
+  print(m3);
+
+}
